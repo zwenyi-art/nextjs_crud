@@ -13,7 +13,7 @@ const AddTopic = () => {
       alert("Title and description are require.");
     }
     try {
-      const res = await fetch("http://localhost:3000/api/topics", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/topics`, {
         method: "POST",
         headers:{
           "Content-type":"application/json",

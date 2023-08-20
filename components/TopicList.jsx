@@ -9,7 +9,7 @@ const TopicList = () => {
   useEffect(() => {
     const getTopics = async()=>{
       try {
-        const res =await fetch("http://localhost:3000/api/topics",{cache:'no-cache'});
+        const res =await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/topics`,{cache:'no-cache'});
         if(!res.ok){
           throw new Error("Failed to load topic");
         }
